@@ -60,9 +60,12 @@ for (const countrySetTwo of countriesSetTwo) {
   document.body.appendChild(setOfDivs);
 }
 
-
 //1.5 Basandote en el ejercicio anterior. Crea un botón que elimine el último
 //elemento de la serie de divs.
+
+const button = document.createElement("button");
+button.textContent = "Elimina div";
+document.body.appendChild(button);
 
 //1.6 Basandote en el ejercicio anterior. Crea un botón para cada uno de los
 //divs que elimine ese mismo elemento del html.
