@@ -64,7 +64,7 @@ for (const countrySetTwo of countriesSetTwo) {
 //elemento de la serie de divs.
 
 const button = document.createElement("button");
-button.textContent = "Elimina div";
+button.textContent = "Elimina ultimo div";
 document.body.appendChild(button);
 
 function deleteLastDiv() {
@@ -80,3 +80,22 @@ button.addEventListener("click", deleteLastDiv);
 
 //1.6 Basandote en el ejercicio anterior. Crea un botón para cada uno de los
 //divs que elimine ese mismo elemento del html.
+
+const selectDivs = document.querySelectorAll("div");
+;
+
+selectDivs.forEach(element => {
+  const buttonDiv = document.createElement("button");
+  buttonDiv.textContent = ("Elimino este div")
+  element.appendChild(buttonDiv);
+  buttonDiv.addEventListener("click", deleteThisDiv)
+
+});
+
+function deleteThisDiv(event) {
+  const deletionOfThisDiv = event.target.parentNode;
+  if (deletionOfThisDiv) {
+    deletionOfThisDiv.remove()
+  }
+}
+
