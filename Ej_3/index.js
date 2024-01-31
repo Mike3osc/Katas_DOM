@@ -67,5 +67,16 @@ const button = document.createElement("button");
 button.textContent = "Elimina div";
 document.body.appendChild(button);
 
+function deleteLastDiv() {
+  const deletion = document.querySelector("div:last-of-type");
+
+  if (deletion) {
+    deletion.remove()
+  }
+}
+
+button.addEventListener("click", deleteLastDiv);
+
+
 //1.6 Basandote en el ejercicio anterior. Crea un botón para cada uno de los
 //divs que elimine ese mismo elemento del html.
